@@ -33,7 +33,7 @@ export default class AlternativeSchemaSelect extends Component {
         <div key={"OneOf" + attributePath} style={{ padding: "0 0 10px 0" }} className={"content-type-wrapper "}>
           <div>
             <br/>
-            <h3 htmlFor={attributePath} className={"response-control-alternative-examples__title"}>Choose {type} the above request type to see an example:</h3>
+            <h3 htmlFor={attributePath} className={"response-control-alternative-examples__title"}>Choose a type from the list below to see an example value:</h3>
           </div>
           <select
             className="content-type"
@@ -41,7 +41,6 @@ export default class AlternativeSchemaSelect extends Component {
             value={defaultOption}
             onChange={(e) => this.oneOfChange(e, attributePath)}
           >
-          <option key={"empty"} value={"-1"}>{"<empty>"}</option>
             {Object.keys(options).map((key, index) => {
               return <option key={index + key} value={index}>{options[key]}</option>
             })}
@@ -66,6 +65,7 @@ export default class AlternativeSchemaSelect extends Component {
     return (
       <div>
         {oneOfComponents}
+        <br/>
       </div>
     )
   }

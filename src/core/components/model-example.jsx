@@ -75,19 +75,19 @@ export default class ModelExample extends React.Component {
         </li> : null }
       </ul>
       <div>
-        {
-          this.state.activeTab === "example" ? (
-            example ? example : (
-              <HighlightCode value="(no example available)" />
-            )
-          ) : null
-        }
-        {
+      {
           this.state.activeTab === "example" && alternativeSchemas && onChange ? (
               <AlternativeSchemaSelect
                 alternativeSchemas = {alternativeSchemas}
                 onSelectionChanged = {onChange}
               />
+          ) : null
+        }
+        {
+          this.state.activeTab === "example" ? (
+            example ? example : (
+              <HighlightCode value="(no example available)" />
+            )
           ) : null
         }
         {
