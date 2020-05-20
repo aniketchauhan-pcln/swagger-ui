@@ -1,6 +1,7 @@
   // Base Colours
 $black: #000;
 $white: #fff;
+$priceline-blue: #0077ff;
 $gray-50: lighten($black, 92%); //ebebeb
 $gray-200: lighten($black, 62.75%); // #a0a0a0
 $gray-300: lighten($black, 56.5%); // #909090
@@ -12,7 +13,7 @@ $gray-700: lighten($black, 31.25%); // #505050
 $gray-800: lighten($black, 25%); // #404040
 $gray-900: lighten($black, 18.75%); // #303030
 
-$cod-gray: #1b1b1b;
+$cod-gray: $priceline-blue;
 $bright-gray: #3b4151;
 $mako-gray: #41444e;
 $waterloo-gray: #7d8492;
@@ -42,8 +43,8 @@ $color-danger: #f00 !default;
 
 $color-primary-hover: lighten($color-primary, .5%) !default;
 
-$_color-post: #49cc90 !default;
-$_color-get: #61affe !default;
+$_color-post: $priceline-blue !default;
+$_color-get: $priceline-blue !default;
 $_color-put: #fca130 !default;
 $_color-delete: #f93e3e !default;
 $_color-head: #9012fe !default;
